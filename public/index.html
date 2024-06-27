@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Turnos Médicos</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container-inicio">
+        <h1>Turnos Médicos</h1>
+        <div class="options">
+            <button onclick="crearTurno()">Crear turno</button>
+            <button onclick="mostrarTurno()">Mostrar Turnos</button>
+        </div>
+    </div>
+    <div class="container-crearTurno">
+        <h1>Crear turno</h1>
+        <form id="turnoForm">
+            <input type="hidden" id="turnoId">
+            <div class="container-paciente">
+                <label for="paciente">Paciente:</label>
+                <input type="text" id="paciente" required>
+            </div>
+            <div class="container-documento">
+                <label for="documento">Dni:</label>
+                <input type="text" id="documento" required>
+            </div>
+            <div class="container-fecha">
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" required>
+            </div>
+            <div class="container-hora">
+                <label for="hora">Hora:</label>
+                <input type="time" id="hora" required>
+            </div>
+            <div class="container-especialidad">
+                <label for="especialidad">Especialidad: </label>
+                <input id="especialidad" type="search" name="especialidades" list="listaEspecialidades">
+                <div class="container-opciones-especialidades">
+                    <datalist id="listaEspecialidades" class="listaEsp">
+                        <option value="Oftalmologia"></option>
+                        <option value="Ginecologia"></option>
+                        <option value="Traumatologia"></option>
+                        <option value="Cardiologia"></option>
+                        <option value="Dermatologia"></option>
+                        <option value="Neurologia"></option>
+                        <option value="Psicologia"></option>
+                    </datalist>
+                </div>
+            </div>
+        </form>
+        <button onclick="guardar()" class="btn">Guardar</button>
+        <button onclick="volver()" class="btn btn-back">Volver</button>
+    </div>
+    <div class="container-mostrarTurno">
+        <h1>Mostrar Turnos</h1>
+        <div class="form-group">
+            <label for="buscarPaciente">Buscar turno por documento:</label>
+            <input type="text" id="buscarPaciente" required>
+            <button onclick="buscar()" class="btn">Buscar</button>
+        </div>
+        <table id="turnosTable">
+            <thead>
+                <tr>
+                    <th>Paciente</th>
+                    <th>Fecha</th>
+                    <th>Hora</th>
+                    <th>Especialidad</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+        <button onclick="volver()" class="btn btn-back">Volver</button>
+    </div>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

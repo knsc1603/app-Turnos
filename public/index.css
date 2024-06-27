@@ -1,0 +1,115 @@
+/* ESTILOS PARA EL INICIO */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container-inicio, .container-crearTurno, .container-mostrarTurno {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1 {
+    color: #000000;
+    text-align: center;
+}
+
+.options {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #899ade;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 5%;
+    
+}
+
+button:hover {
+    background-color: #242f8d;
+    color: white;
+}
+
+/* ESTILOS PARA CREAR TURNO */
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="time"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.btn-editar{
+    margin-left: 45%;
+}
+
+button.btn {
+    display: block;
+    width: 30%;
+    padding: 10px;
+    background-color: #2e2098;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-left: 36%;
+}
+
+button.btn:hover, button.btn-back:hover {
+    background-color: #373ae4;
+}
+
+button.btn-back {
+    background-color: #5b6065;
+}
+
+/* ESTILOS PARA MOSTRAR TURNOS */ 
+#turnosTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#turnosTable, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #4459f9;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
