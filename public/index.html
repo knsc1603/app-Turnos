@@ -10,8 +10,8 @@
     <div class="container-inicio">
         <h1>Turnos Médicos</h1>
         <div class="options">
-            <button onclick="crearTurno()">Crear turno</button>
-            <button onclick="mostrarTurno()">Mostrar Turnos</button>
+            <button id="crearTurno" onclick="crearTurno()">Crear turno</button>
+            <button id="mostrarTurno" onclick="mostrarTurno()">Mostrar Turnos</button>
         </div>
     </div>
     <div class="container-crearTurno">
@@ -50,15 +50,15 @@
                 </div>
             </div>
         </form>
-        <button onclick="guardar()" class="btn">Guardar</button>
-        <button onclick="volver()" class="btn btn-back">Volver</button>
+        <button id="guardar" onclick="guardar()" class="btn">Guardar</button>
+        <button id="volver" onclick="volver()" class="btn btn-back">Volver</button>
     </div>
     <div class="container-mostrarTurno">
         <h1>Mostrar Turnos</h1>
         <div class="form-group">
             <label for="buscarPaciente">Buscar turno por documento:</label>
             <input type="text" id="buscarPaciente" required>
-            <button onclick="buscar()" class="btn">Buscar</button>
+            <button id="buscar" onclick="buscar()" class="btn">Buscar</button>
         </div>
         <table id="turnosTable">
             <thead>
@@ -73,7 +73,7 @@
                 
             </tbody>
         </table>
-        <button onclick="volver()" class="btn btn-back">Volver</button>
+        <button id="volver" onclick="volver()" class="btn btn-back">Volver</button>
     </div>
     <script src="jquery-3.7.1.min.js"></script>
     <script src="index.js"></script>
